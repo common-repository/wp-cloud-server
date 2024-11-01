@@ -1,0 +1,48 @@
+<?php
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+add_action( 'admin_post_nopriv_handle_runcloud_server_action', 'wpcs_handle_runcloud_server_actions' );
+add_action( 'admin_post_handle_runcloud_server_action', 'wpcs_handle_runcloud_server_actions' );
+
+function wpcs_handle_runcloud_server_actions() {
+	
+	// Read in the Server Action
+	if ( isset( $_POST['wpcs_runcloud_server_action'] ) ) {
+		$action = $_POST['wpcs_runcloud_server_action'];
+	}
+
+	// Read in the Server Id
+	if ( isset( $_POST['wpcs_runcloud_server_id'] ) ) {
+		$server_id = $_POST['wpcs_runcloud_server_id'];
+	}
+	
+	// Read in the Nonce
+	if ( isset( $_POST["wpcs_handle_runcloud_server_action_nonce_{$server_id}"] ) ) {
+		$nonce = $_POST["wpcs_handle_runcloud_server_action_nonce_{$server_id}"];
+	}
+	
+	// Send the DigitalOcean API Command
+	if ( isset( $action ) && isset( $server_id ) && isset( $nonce ) && wp_verify_nonce( $nonce, "handle_runcloud_server_action_nonce_{$server_id}")) {
+
+		$response[] = wpcs_runcloud_cloud_server_action( $action, $server_id, false  );
+		update_option( 'wpcs_runcloud_server_action_response', $response );
+		
+		$feedback	= get_option( 'wpcs_setting_errors', array());
+	
+		$feedback[] = array(
+        	'setting' => 'wpcs_runcloud_server_action',
+        	'code'    => 'settings_updated',
+        	'message' => 'The RunCloud Server was Successfully Updated',
+        	'type'    => 'success',
+			'status'  => 'new',
+   	 	);
+	
+		// Update the feedback array
+		update_option( 'wpcs_setting_errors', $feedback );
+	}
+	
+	$url = admin_url();
+	wp_redirect( $url . 'admin.php?page=wp-cloud-servers-runcloud'  ); exit;
+}

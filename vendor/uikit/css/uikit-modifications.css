@@ -1,0 +1,154 @@
+.uk-container .uk-container {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.uk-alert-danger {
+	border: 1px solid #fac5cf;
+	border-radius: 3px;
+}
+
+.uk-alert-success {
+	border: 1px solid #71e0b6;
+	border-radius: 3px;
+}
+
+.uk-alert-primary {
+	border: 1px solid #66aef5;
+	border-radius: 3px;
+}
+
+.uk-alert-upgrade {
+	border: 1px solid #a78bfa;
+	border-radius: 3px;
+	background-color: #f5f8ff;
+	color: #8b5cf6;
+}
+
+pre {
+	font: .775rem/1.5 Consolas,monaco,monospace;
+	border: none;
+}
+
+.uk-input, .uk-select, .uk-textarea {
+border: 1px solid #7e8993;
+border-radius: 4px;
+}
+
+ul.uk-tab > li {
+	margin-bottom: 0;	
+}
+
+ul.uk-tab > li:first-child {
+	padding-left: 0;	
+}
+
+.uk-tab>*>a {
+	border-bottom: 2px solid transparent;
+}
+
+ul.uk-tab {
+	margin: 0 0 40px 0;
+}
+
+.uk-tab::before {
+	left: 0;
+}
+
+.uk-tab>.uk-active>a {
+color: #333;
+border-color: #7C3AED;
+}
+
+.uk-link {
+    color: #7C3AED;
+    text-decoration: none;
+    cursor:pointer
+}
+
+.uk-link-toggle:focus .uk-link, .uk-link-toggle:hover .uk-link, .uk-link:hover {
+    color: #6D28D9;
+    text-decoration:underline
+}
+
+.uk-table-striped tbody tr:nth-of-type(odd), .uk-table-striped>tr:nth-of-type(odd) {
+	background: #ffffff;
+}
+
+.uk-card-title, .uk-h3, .uk-legend, h3 {
+	font-size: 1.4rem;
+}
+
+.server-modal.uk-modal-dialog, .app-modal.uk-modal-dialog{
+	background:#fff
+}
+
+.server-info.uk-table.uk-table-striped tbody tr:nth-of-type(odd),.server-info.uk-table.uk-table-striped>tr:nth-of-type(odd) {
+	background:#f3f3f3
+}
+
+.server-info.uk-modal-body {
+	padding: 0px;
+}
+
+.uk-modal-dialog {
+	width: 1050px;
+	background: #f7f7f7;
+	border: 2px solid #a78bfa;
+}
+
+.uk-button-default {
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #999;
+}
+
+.uk-button {
+	padding: 0 20px;
+	font-size: .775rem;
+}
+
+@media (min-width: 960px) {
+
+    .uk-h1, h1 {
+        font-size: 2.4rem;
+    }
+
+    .uk-h2, h2 {
+        font-size: 1.3rem;
+    }
+	
+	.uk-h3, h3 {
+		font-size: 1.1rem;
+	}
+}
+
+svg {
+	vertical-align: baseline !important;
+}
+
+.uk-tab-left::before {
+border-right: 1px solid #e5e5e5;
+border-bottom: none;
+border-left: none;
+}
+
+.uk-tab-left>*>a {
+text-align: left;
+border-right: 2px solid transparent;
+border-bottom: none;
+}
+
+.uk-tab-left>*>a {
+border-bottom: none;
+}
+
+.uk-tab-left>*>a {
+padding: 8px 10px;
+	text-transform: none;
+}
+
+.uk-open>a {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}

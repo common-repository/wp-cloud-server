@@ -1,0 +1,5 @@
+.uk-alert-danger{border:1px solid #fac5cf;border-radius:3px}.uk-alert-success{border:1px solid #71e0b6;border-radius:3px}.uk-alert-primary{border:1px solid #66aef5;border-radius:3px}pre{font:.775rem/1.5 Consolas,monaco,monospace;border:none}.uk-input,.uk-select,.uk-textarea{border:1px solid #7e8993;border-radius:4px}ul.uk-tab>li{margin-bottom:0}ul.uk-tab>li:first-child{padding-left:0}.uk-tab>*>a{border-bottom:2px solid transparent}ul.uk-tab{margin:0 0 40px}.uk-tab::before{left:0}.uk-table-striped tbody tr:nth-of-type(odd),.uk-table-striped>tr:nth-of-type(odd){background:#fff}.uk-card-title,.uk-h3,.uk-legend,h3{font-size:1.4rem}.server-modal.uk-modal-dialog{background:#fff}.server-info.uk-table.uk-table-striped tbody tr:nth-of-type(odd),.server-info.uk-table.uk-table-striped>tr:nth-of-type(odd){background:#f3f3f3}.server-info.uk-modal-body{padding:0 30px}.uk-modal-dialog{width:650px}@media (min-width:960px){.uk-h1,h1{font-size:2.625rem}.uk-h2,h2{font-size:1.7rem}}
+.uk-container .uk-container {
+	padding-left: 20px;
+	padding-right: 20px;
+}

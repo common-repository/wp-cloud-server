@@ -1,0 +1,25 @@
+/**
+ * WP Cloud Server - Modified WordPress CSS
+ *
+ * @Author:	Gary Jordan (gary@designedforpixels.com)
+ * @Date:	24-06-2019
+ */
+
+/* Table CSS */
+
+#adminmenuwrap, #wpadminbar {
+	display: none;
+	width: 0px;
+}
+
+#adminmenuback {
+	width: 0px;
+}
+
+#wpcontent, #wpfooter {
+	margin-left: 0px;	
+}
+
+html.wp-toolbar {
+	padding-top: 0 !important;	
+}
